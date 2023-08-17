@@ -5,14 +5,14 @@
 import math
 from fractions import Fraction
 
-# Основная программа ("допроверочная")
+# Основная программа ("без модуля fractions")
 drob1 = str(input('Введите строку вида "a/b": '))
 drob2 = str(input('Введите строку вида "c/d": '))
 a, b = map(int, drob1.split("/"))
 c, d = map(int, drob2.split("/"))
 
 # Сложение дробей
-nom_summ = a*d + b*c
+nom_summ = (a*d) + (b*c)
 denom_summ = b*d
 nod1 = math.gcd(nom_summ, denom_summ)
 

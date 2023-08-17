@@ -19,8 +19,8 @@ class Bankomat():
         # Введем счетчик количеств пополнения карты
         count = 0        
         add_summ = float(input("Укажите сумму пополнения карты: "))
-        if add_summ%50==0:
-            if count <=3:
+        if add_summ%50 == 0:
+            if count <= 3:
                 print(f"Вы внесли сумму: {add_summ}")                
             else:
                 add_summ = add_summ*0.97
@@ -32,7 +32,7 @@ class Bankomat():
         
     def output_money (current_balance):
         output_summ = float(input("Какую сумму Вы хотите снять с карты?" ))
-        if output_summ%50==0:
+        if output_summ%50 == 0:
             print("Предупреждение:комиссия за снятие составляет 1.5% от суммы снятия, но не менее 30 и не более 600 у.е.")
 
 

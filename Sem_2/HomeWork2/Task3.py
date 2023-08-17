@@ -26,7 +26,7 @@ nod2 = math.gcd(nom_mult, denom_mult)
 drob1_fract = Fraction(a, b)
 drob2_fract = Fraction(c, d)
 
-if denom_summ ==0 or denom_mult == 0:
+if denom_summ == 0 or denom_mult == 0:
     raise ZeroDivisionError("Деление на ноль невозможно")
 else:
     print(f"Cумма дробей {drob1} и {drob2} - {nom_summ//nod1}/{denom_summ//nod1}")

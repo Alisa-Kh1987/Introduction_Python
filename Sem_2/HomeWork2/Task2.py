@@ -2,9 +2,9 @@
 # Функцию hex используйте для проверки своего результата.
 
 num = int(input('Введите целое число: '))
-result_16 = ""
+res_16 = ""
 num16 = num
 while num16 > 0:
-    result_16 = str(num16 % 16) + result_16
+    res_16 = str(num16 % 16) + res_16
     num16 //= 16
-print(result_16, hex(num).replace("0x", ''))
+print(res_16, hex(num).replace("0x", ''))

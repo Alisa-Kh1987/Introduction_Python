@@ -4,7 +4,7 @@
 # *Верните все возможные варианты комплектации рюкзака.
 
 things = {'palatka': 4.0, 'spalnik': 2.0, 'kovrik': 1.0, 'kotelok': 0.2, 'eda': 3.0, 'voda': 1.5, 'spichki': 0.05, 'kompas': 0.1, 'pila': 0.3, 'tent': 1.1, 'antikomarin': 0.3, 'fonarik': 0.1, 'topor': 2.0, 'gorelka': 1.0, 'gas': 1.0}
-backpack_weight = 15
+backpack_weight = 13.5
 # поиск допустимой комбинации:
 backpack_things = {}
 for key, value in things.items():
@@ -14,6 +14,7 @@ for key, value in things.items():
 
 print(sum(backpack_things.values()))
 print(backpack_things)
+
 
 
 

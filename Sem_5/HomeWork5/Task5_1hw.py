@@ -2,6 +2,6 @@
 # Функция возвращает кортеж из трёх элементов: путь, имя файла, расширение файла.
 
 def abs_path(absolute_path) -> tuple():
-    absolute_path = 'C:\Users\petru\Downloads\Погружение в Python. Файлы и файловая система.pdf'
+    absolute_path = 'C:\Users\petru\Downloads\Файлы и файловая система.pdf'
 
 list

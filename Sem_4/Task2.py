@@ -1,9 +1,12 @@
-# ✔ Напишите функцию, которая принимает строку текста.
-# ✔ Сформируйте список с уникальными кодами Unicode каждого символа введённой строки отсортированный по убыванию.
+# ✔Функция получает на вход строку из двух чисел через пробел.
+# ✔Сформируйте словарь, где ключом будет символ из Unicode, а значением — целое число.
+# ✔Диапазон пар ключ-значение от наименьшего из введённых пользователем чисел до наибольшего включительно.
 
-# num = float(input(''))
-# ostatok = (num - int(num))*10
-# print(ostatok)
-import sys
-from random import *
-from super_module import func as f
+def input_str(s):
+    new_li = sorted(list(map(int, s.split())))
+    new_dict = {chr(i): i for i in range(new_li[0], new_li[1]+1)}
+    return new_dict
+
+
+st = input('Введите строку: ')
+print(input_str(st))

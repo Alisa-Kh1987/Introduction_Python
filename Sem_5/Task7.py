@@ -3,5 +3,10 @@
 # ✔ Для проверки числа на простоту используйте правило: «число является простым, если делится нацело только на единицу и на себя».
 
 def gen_simple_num(num):
+    summ = 0
     for i in range(2, num+1):
-        summ = 0
+        for j in range(2, i):
+            if i%j !=0:
+                summ +=1
+        if summ ==9:
+            yield i

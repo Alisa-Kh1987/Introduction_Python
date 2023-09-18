@@ -14,4 +14,4 @@ def write_in_file(num_of_str, file_name):
         f.writelines('\n'.join([f'{randint(min_size, max_size+1)} | {uniform(min_size, max_size+1)}' for i in range(num_of_str)]))
 
 
-write_in_file(5, 'Task7_1' )
+write_in_file(12, 'Task7_1' )

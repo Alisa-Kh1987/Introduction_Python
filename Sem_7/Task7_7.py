@@ -5,7 +5,6 @@
 # ✔В исходной папке должны остаться только те файлы, которые не подошли для сортировки.
 
 import os
-import shutil
 
 
 def sort_files(files_folder, video, images, text_docums, music_docs):

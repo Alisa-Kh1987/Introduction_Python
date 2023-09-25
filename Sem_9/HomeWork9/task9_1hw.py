@@ -26,7 +26,7 @@ def find_roots(a, b, c):
 
 # Генерация csv файла с тремя случайными числами в каждой строке. 100-1000 строк.
 def generate_csv_file(filename):
-    with open(filename, mode='w', newline='') as file:
+    with open(filename, 'w', newline='') as file:
         writer = csv.writer(file)
         for _ in range(random.randint(100, 1001)):
             writer.writerow([random.randint(0,100) for _ in range(3)])
@@ -37,7 +37,7 @@ def from_csv_decorator(func):
     @functools.wraps(func)
     def wrapper(filename):
         results = []
-        with open(filename, mode='r') as file:
+        with open(filename,'r', encoding='utf-8') as file:
             reader = csv.reader(file)
             for row in reader:
                 a, b, c = map(int, row)
@@ -50,7 +50,7 @@ def log_decorator(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
-        with open('log.json', 'a') as f:
+        with open('log.json', 'a', encoding='utf-8') as f:
             json.dump({'func': func.__name__, 'args': args, 'kwargs': kwargs, 'result': result}, f)
         return result
     return wrapper

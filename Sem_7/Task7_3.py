@@ -1,3 +1,7 @@
+import json
+import os
+
+
 def open_files(file_name1, file_name2):
     names, numbers = None, None
     with (
@@ -22,4 +26,17 @@ def open_files(file_name1, file_name2):
 
 open_files('file_names.txt', 'Task7_1.txt')
 
-    
+def create_json(list_, file_path):
+    dict_ = None
+    with open('results.txt', 'r', encoding='utf-8') as f:
+        names = f.readlines()
+        for name in names:
+            name = name.strip().split(' -> ')
+            dict_[name[0]] = float(name[1])
+        print(dict_)
+
+    with open(file_path, 'a', encoding='utf-8') as f:
+        json.dump(dict_, f, indent=4, ensure_ascii=False)
+        
+
+create_json(os.path.join(os.getcwd(), 'first_json.json'))

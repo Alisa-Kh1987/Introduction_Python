@@ -11,7 +11,11 @@
 # ✔ Любое действие выводит сумму денег
 
 # first_balance = 0
-class Bankomat():
+class Bankomat:
+
+    def __init__(self, current_balance: float, first_balance: float):
+        self.current_balance = current_balance
+        self.first_balance = first_balance
     def current_balance(current_balance, first_balance=0.0):
         current_balance = first_balance
 
